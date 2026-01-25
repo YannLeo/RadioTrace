@@ -55,7 +55,7 @@ def print_metrics_test(metrics, epoch_samples, error, results_folder):
         f.write("\n")
 def parse_args():
     parser = argparse.ArgumentParser(description="configure")
-    parser.add_argument("--cfg", help="experiment configure file name", type=str, default='configs/radio_sample_DDPM_by_y_MultiTx_BScorr_seenmean_SGDM_vqsg_heuristic.yaml')
+    parser.add_argument("--cfg", help="experiment configure file name", type=str, default='configs/radio_sample.yaml')
     # data
     parser.add_argument('--data_dir', default='./RadioMapSeer/')
 
@@ -173,17 +173,21 @@ def main(args):
 
 
     sampler_cfg = cfg.sampler
+    if args.type == 'random':
+        save_folder = './results/' + f'RadioTrace_scen_{args.type}_rate_{args.rate}_lr_{args.lr}_momentum_{args.momentum}_tau_{args.tau}' + ('_cluster' if args.cluster_init else '')
+    elif args.type == 'restrict_wo_BS':
+        save_folder = './results/' + f'RadioTrace_scen_{args.type}_rate_{args.rate}_forbidden_{args.num_forbidden}_radius_{args.rad}_lr_{args.lr}_momentum_{args.momentum}_tau_{args.tau}' + ('_cluster' if args.cluster_init else '')
     sampler = Sampler(
         ldm, dl, batch_size=sampler_cfg.batch_size,
         sample_num=sampler_cfg.sample_num,
-        results_folder=sampler_cfg.save_folder,cfg=cfg,args=args
+        results_folder=save_folder,cfg=cfg,args=args
     )
     sampler.sample()
     if data_cfg.name == 'cityscapes' or data_cfg.name == 'sr' or data_cfg.name == 'edge':
         exit()
     else:
         # assert len(os.listdir(sampler_cfg.target_path)) > 0, "{} have no image !".format(sampler_cfg.target_path)
-        # sampler.cal_fid(target_path=sampler_cfg.target_path)
+        sampler.cal_fid(target_path=sampler_cfg.target_path)
         pass
     
 

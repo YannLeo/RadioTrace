@@ -889,7 +889,7 @@ class DDPM(nn.Module):
             for idx in range(bsgrad_scale.shape[0]):
                 if bsgrad_step[idx].max() > base:
                     bsgrad_scale[idx] = bsgrad_scale[idx] / bsgrad_step[idx].max() * base
-            BS_m = momentum * BS_m + bsgrad_scale
+            BS_m = momentum * BS_m + (1.4 - momentum) * bsgrad_scale
             bs += - BS_m
             bs += i / len(time_steps) * tao * (bs_best - bs)
             flag_nobuilding = True

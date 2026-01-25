@@ -67,9 +67,9 @@ sampler:
   sample_num: 1000
   use_ema: False
   # save_folder: './results/test_DDPM_seenmean_SGDM0.4_250_sample100_by_y_randommask_1_multiTx_BScorr_seed51_vqsg_kmeans_lr100_Txmodify_init15_Tx80'
-  save_folder: './results/test_DDPM_seenmean_SGDM0.4_250_sample100_by_y_restrictmask_1_2_50_multiTx_BScorr_seed51_vqsg_heuristic_kmeansv1_lr300_Txmodify_init15_Tx80'
+  # save_folder: './results/test_DDPM_seenmean_SGDM0.4_250_sample100_by_y_restrictmask_1_2_50_multiTx_BScorr_seed51_vqsg_heuristic_kmeansv1_lr300_Txmodify_init15_Tx80'
   # save_folder: './results/test_DDPM_seenmean_SGDM0.4_250_sample100_by_y_nonuniformmmask_1_5_multiTx_BScorr_seed51_vqsg_nokmeans_lr100_Txmodify_init15_Tx80'
   # save_folder: './results/test1'
-  ckpt_path: "./results/LDM_Car_aa_DDPM_multiTx_correct/model-250.pt"
+  # ckpt_path: "./results/LDM_Car_aa_DDPM_multiTx_correct/model-250.pt"
   # ckpt_path: "./model-34.pt"
   # ckpt_path: "./results/LDM_Car_aa/model-34.pt"
