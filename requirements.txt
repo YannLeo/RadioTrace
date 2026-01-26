@@ -6,7 +6,7 @@ ema_pytorch==0.7.9
 fvcore==0.1.5.post20221221
 matplotlib==3.10.8
 more_itertools==10.8.0
-numpy==2.4.1
+numpy==2.2.0
 omegaconf==2.3.0
 opencv_python_headless==4.12.0.88
 pandas==3.0.0
@@ -14,9 +14,10 @@ Pillow==12.1.0
 PyYAML==6.0.3
 Requests==2.32.5
 scipy==1.17.0
-skimage==0.0
-torch==2.9.1+cu130
+scikit-image==0.24.0
+tensorboard==2.20.0
+torch==2.9.1
 torchmetrics==1.8.2
-torchvision==0.24.1+cu130
+torchvision==0.24.1
 tqdm==4.67.1
 typing_extensions==4.15.0
