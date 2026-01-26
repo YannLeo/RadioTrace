@@ -165,6 +165,8 @@ def main(args):
         )
         # dataset = torch.utils.data.ConcatDataset([dataset] * 5)
     elif data_cfg['name'] == 'radio':
+        if args.data_dir[-1] != '/':
+            args.data_dir += '/'
         dataset = loaders.RadioUNet_c_multiTx(phase="test", numTx=5, dir_dataset=args.data_dir)
     else:
         raise NotImplementedError
