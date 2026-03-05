@@ -189,7 +189,7 @@ def main(args):
         exit()
     else:
         # assert len(os.listdir(sampler_cfg.target_path)) > 0, "{} have no image !".format(sampler_cfg.target_path)
-        sampler.cal_fid(target_path=sampler_cfg.target_path)
+        # sampler.cal_fid(target_path=sampler_cfg.target_path)
         pass
     
 
