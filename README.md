@@ -1,8 +1,8 @@
-# RadioTrace: Transmitter-Aware Diffusion for Training-Free Radio Map Estimation
+# RadioTrace: Transmitter-Aware Diffusion for Radio Map Estimation without Deployment-Time Fine-Tuning
 
 ![](assets/overview.png)
 
-This repository provides code for RadioTrace, a training-free radio map estimation framework that reconstructs RSS radio maps from sparse measurements by integrating a pre-trained diffusion prior with transmitter location estimation inside the denoising loop. An optional propagation-guided K-means initialization improves robustness under restricted-area sampling.
+This repository provides code for RadioTrace, a noval radio map estimation framework that reconstructs RSS radio maps from sparse measurements without deployment-time fine-tuning by integrating a pre-trained diffusion prior with transmitter location estimation inside the denoising loop. An optional propagation-guided K-means initialization improves robustness under restricted-area sampling.
 
 ---
 
@@ -91,10 +91,10 @@ To list all options:
 
 ```
 @article{radiotrace,
-  title={RadioTrace: Transmitter-Aware Diffusion for Training-Free Radio Map Estimation},
-  author={TODO},
-  journal={TODO},
-  year={TODO}
+  title={RadioTrace: Transmitter-Aware Diffusion for Radio Map Estimation without Deployment-Time Fine-Tuning},
+  author={Yang, Liu and Li, Qiang and Cao, Zhuo and Xiong, Weijie and Sun, Guomin and Lin, Jingran},
+  journal={IEEE Transactions on Wireless Communications},
+  year={2026}
 }
 ```
 ---
